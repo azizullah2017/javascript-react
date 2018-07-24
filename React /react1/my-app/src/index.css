@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#map{
+
+  float: right;
+  margin-left: 25%;
+  
+}
+/*
+.marker {
+  background-image: url('marker.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+*/
+.popup {
+  text-align:center;
+  }
+.popup .slideshow .image        { display:none; }
+.popup .slideshow .image.active { display:block; }
+.popup .slideshow img {
+  width:100%;
+  }
+.popup .slideshow .caption {
+  background:#eee;
+  padding:10px;
+  }
+.popup .cycle {
+  padding:10px 0 20px;
+  }
+  .popup .cycle a.prev { float:left; }
+  .popup .cycle a.next { float:right; }
+
+  .main {
+    font-family:Arial;
+    width:500px;
+    display:block;
+    margin:0 auto;
+  }
+  h3 {
+      background: #fff;
+      color: #3498db;
+      font-size: 36px;
+      line-height: 100px;
+      margin: 10px;
+      padding: 2%;
+      position: relative;
+      text-align: center;
+  }
+  .action{
+    display:block;
+    margin:100px auto;
+    width:100%;
+    text-align:center;
+  }
+  .action a {
+    display:inline-block;
+    padding:5px 10px; 
+    background:#f30;
+    color:#fff;
+    text-decoration:none;
+  }
+  .action a:hover{
+    background:#000;
+  }
+
+  #slid button.slick-prev.slick-arrow {
+    left: 0;
+    z-index: 9;
+}
+#slid button.slick-next.slick-arrow {
+    right: 0;
+    z-index: 9;
+}
+#slid .slick-prev:before,#amazingcarousel-2 .slick-next:before {
+    color: #000;
+}
+#slid .slick-dots { bottom: 0 }
+div#imageSlider {
+    z-index: 99999;
+    top: 5em;
+}
+
+
+img{display: block;margin:auto;}
+.slider{
+  width:200px;
+  height: 180px;
+  margin:20px auto;
+  padding:20px;
+  color:blue;
+}
+
+.slick-prev:before, .slick-next:before{
+  color:white;
+  background: black;
+}
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: .25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

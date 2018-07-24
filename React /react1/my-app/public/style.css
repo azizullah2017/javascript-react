@@ -1,0 +1,16 @@
+#map {
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+  }
+
+  .sidebar{float: left;margin-right: 0%; width: 300px;   }
+  #slide{margin-top: 50%; margin-left: 15%;}
+  .slider{ margin: 20% }
+  .header{margin-top: 50%;text-align: center;font-size: 30px}
+
+
+
+
+

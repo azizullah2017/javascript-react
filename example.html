@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<title>Java script function</title>
+<script>
+window.onload=function() {
+
+  var values = new Array(3);
+  values[0] = [1, "apple", 3000];
+  values[1] = [2, "banana", 4000];
+  values[2] = [3, "cherry", 500];
+
+  var tbr = document.getElementById("tb");
+
+
+
+  // for each outer array row
+  for (var i = 0 ; i < values.length; i++) {
+     var tr = document.createElement("tr");
+
+     // for each inner array cell
+     // create td then text, append
+     for (var j = 0; j < values[i].length; j++) {
+       var td = document.createElement("td");
+       var txt = document.createTextNode(values[i][j]);
+       td.appendChild(txt);
+       tr.appendChild(td);
+     }
+
+     // append row to table
+     tbr.appendChild(tr);
+   }
+
+}
+
+</script>
+
+</head>
+<body>
+<table id="tb" border="1">
+<tr><th>Id </th><th>Name</th><th>Salary</th></tr>
+</table>
+</body>

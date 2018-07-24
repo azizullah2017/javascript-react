@@ -1,0 +1,55 @@
+import React, { Component } from 'react';
+import { withGoogleMap, GoogleMap } from 'react-google-maps';
+import logo from './logo.svg';
+import './App.css';
+
+class App extends React.Component {
+
+  render() {
+    const GoogleMapExample = withGoogleMap(props => (
+      <GoogleMap
+        defaultCenter = { { lat: 40.756795, lng: -73.954298 } }
+        defaultZoom = { 12 }
+      >
+      </GoogleMap>
+   ));
+    return (
+        <div>
+        <GoogleMapExample
+          containerElement={ <div style={{ margin:'0%', height: `500px`, width: '500px' }} /> }
+          mapElement={ <div style={{ height: `100%` }} /> }
+        />
+      </div>
+     
+);
+}
+}
+
+
+
+
+export default App;
+
+
+
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGF2aWRndWFuIiwiYSI6ImNpcG50N2s4NDAwNGRmbG5jeXZtMHkxMW4ifQ.ubiXybBxhpidF83H-Zvz7Q';
+const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/dark-v9',
+    center: [-79.3832, 43.6512],
+    zoom: 11
+});
+
+    // Load the vector tile source from the Mapbox Pedestrian traffic example
+map.on('load', () => {
+    map.addLayer({
+        id: 'pedestrian_volume',
+        type: 'circle',
+        source: {
+            type: 'vector',
+            url: 'mapbox://mapbox.dvrdhs7l' // Your Mapbox tileset Map ID
+        },
+        'source-layer': 'Signalized_Intersection_Traff-4ypaqa' // name of tilesets
+    });
+});
+

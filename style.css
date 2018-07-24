@@ -1,0 +1,9 @@
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.fancybox-nav fancybox-next{
+    color: black;
+}
